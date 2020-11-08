@@ -28,12 +28,19 @@ exports.url_post = (req, res) => {
         } else {
             res.render("index", {
                 route: "short", 
-                url: data.url,
+                crypto: data.shortened_url,
                 short_url: req.hostname + "/" + data.shortened_url
             })
         }
 
         
         
+    })
+}
+
+exports.url_redirect = (req, res) => {
+    URL.findOne({shortened_url: req.params.crypto}, (err, data) => {
+        if(err) throw err;
+        res.redirect(`${data.url}`);
     })
 }

@@ -19,7 +19,7 @@ mongoose.connect(process.env.DATABASE_URI, {
 
 app.get("/", urlController.home_page);
 app.post("/", urlController.url_post);
-
+app.get("/:crypto", urlController.url_redirect);
 
 app.listen(PORT, () => {
     console.log("Server is running!");
