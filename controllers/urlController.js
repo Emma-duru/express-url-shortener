@@ -22,7 +22,8 @@ exports.url_post = (req, res) => {
                 res.render("index", {
                     route: "short", 
                     url: url.url, 
-                    short_url: req.hostname + "/" + url.shortened_url
+                    short_url: req.hostname + "/" + url.shortened_url,
+                    crypto: url.shortened_url
                 })
             })
         } else {
