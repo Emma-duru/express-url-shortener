@@ -2,6 +2,8 @@
 
 A simple url shortener made with NodeJS, Express and MongoDB
 
+Project is live at [https://expressurlshortener.herokuapp.com/](https://expressurlshortener.herokuapp.com/)
+
 ## Packages Used
 
 * [nodejs](https://nodejs.org)
